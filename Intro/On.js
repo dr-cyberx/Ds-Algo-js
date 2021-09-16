@@ -8,12 +8,16 @@ const { cars } = require("../SampleArray");
 
 function findNemo(arr) {
   let t0 = performance.now();
+  let x = 0;
   for(let i = 0; i < arr.length; i++){
+    x += i
     if(arr[i]=== 'nemo'){
-      console.log('nemo found')
+      console.log('nemo found');
+      break;
     }
   }
   let t1 = performance.now();
+  console.log("Total Iteration : " ,x)
 
   console.log('function took : ', t1 - t0 + " miliseconds")
 }
