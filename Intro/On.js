@@ -1,6 +1,6 @@
 
 const {performance} = require('perf_hooks');
-const { cars } = require("./SampleArray");
+const { cars } = require("../SampleArray");
 // const arr = ['nemo'];
 // const secondArr = ['ram', 'sham', 'jhone', 'saurav', 'deepak', 'alex', 'raman', 'nemo']
 // const arr = new Array(10000000).fill('nemo')

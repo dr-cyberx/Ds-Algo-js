@@ -1,6 +1,6 @@
 // constant time O(1)
 const { performance } = require("perf_hooks");
-const { cars } = require("./SampleArray");
+const { cars } = require("../SampleArray");
 
 const LogFirstItem = (arr) => {
   let t0 = performance.now();
