@@ -18,3 +18,5 @@ function findSameVal(array1, array2) {
 }
 
 console.log(findSameVal(arr1, arr2));
+
+// O(n^2) not good case
