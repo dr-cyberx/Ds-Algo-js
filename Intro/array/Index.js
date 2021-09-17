@@ -1,3 +1,5 @@
+// Array methods with Big O
+
 let testArr = ["a", "b", "c", "d"];
 
 // testArr.push('e'); //O(1)
