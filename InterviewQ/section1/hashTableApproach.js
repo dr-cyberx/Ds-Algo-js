@@ -20,6 +20,11 @@ const IndealFunction = (array1, array2) => {
   return false;
 };
 
-console.log(IndealFunction(arr1, arr3));
+const readableFuntion = (array1, array2) => {
+    return array1.some(item => array2.includes(item))
+}
+
+// console.log(IndealFunction(arr1, arr3));
+console.log(readableFuntion(arr1, arr3));
 
 // O(2n) thats god
