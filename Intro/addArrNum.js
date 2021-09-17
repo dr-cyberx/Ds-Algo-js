@@ -9,3 +9,5 @@ function printNumbers(arr) {
 }
 
 printNumbers(arr);
+
+// Big O : O(n^2) or O(n * 2)
