@@ -1,18 +1,25 @@
-let MyStr = "vishal kumar";
+let MyStr = "ramuk lahsiv";
 
 const reverseString = (str) => {
-  let Array = [];
-  let reversedArray = "";
-  for (let i = 0; i < str.length; i++) {
-    //O(n)
-    Array.push(str[i]);
+
+  if (!str || str.length < 2 || typeof str !== "string") {
+    return "it not a valid string";
   }
 
-  for (let j = Array.length - 1; j >= 0; j--) {
+  let Array = [];
+
+  for (let j = str.length - 1; j >= 0; j--) {
     //O(n)
-    reversedArray += Array[j];
+    Array.push(str[j]);
   }
-  console.log(reversedArray);
+  return Array.join("");
 };
 
-reverseString(MyStr);
+
+const reverseString2 = (str) => {
+    return str.split("").reverse().join("")
+}
+
+const reverseString3 = str => [...str].reverse().join("")
+
+console.log(reverseString3(MyStr));
