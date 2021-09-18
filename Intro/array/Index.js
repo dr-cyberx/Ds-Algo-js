@@ -6,8 +6,9 @@ let testArr = ["a", "b", "c", "d"];
 //testArr[0] //O(1)
 // testArr.pop(); //O(1)
 
-testArr.unshift('x') //O(n)
-testArr.unshift('y') //O(n)
+// testArr.unshift('x') //O(n)
+
+testArr.splice(2, 0, 'y') //O(n)
 
 
 console.log(testArr);
