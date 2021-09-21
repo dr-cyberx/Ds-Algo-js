@@ -9,7 +9,7 @@ class hashTable {
       hash = (hash + key.charCodeAt(i) * i) % this.data.length;
     }
     return hash;
-  }
+  } //O(1);
 
   set(key, value) {
     let address = this._hash(key);
@@ -18,7 +18,7 @@ class hashTable {
     }
     this.data[address].push([key, value]);
     return this.data;
-  }
+  } //O(1)
 
   get(key) {
     let address = this._hash(key);
@@ -30,13 +30,13 @@ class hashTable {
       }
       return undefined;
     }
-  }
+  } //O(1)
 
   keys() {
     let result = [];
     for (let i = 0; i < this.data.length; i++) {
       if (this.data[i] && this.data[i].length) {
-        console.log(this.data[i].length);
+        console.log(this.data[i]);
 
         if (this.data.length > 1) {
           for (let j = 0; j < this.data[i].length; j++) {
@@ -48,7 +48,7 @@ class hashTable {
       }
     }
     return result;
-  }
+  } //O(1)
 }
 
 let hash = new hashTable(10);
@@ -58,5 +58,5 @@ hash.set("name", "Sourav");
 hash.set("company", "codedrill");
 hash.set("age", "45");
 // console.log(hash.set("position", "web dev"));
-console.log(hash.keys());
+hash.keys();
 // console.log(hash)
