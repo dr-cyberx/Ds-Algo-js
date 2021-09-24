@@ -39,19 +39,30 @@ class LinkedList {
     return array;
   }
 
+  remove(index) {
+    const leader = this.traversalToIndex(index - 1);
+    const follower = this.traversalToIndex(index + 1);
+    delete leader.next;
+    leader.next = follower;
+	this.length --;
+  }
+
   insert(index, val) {
     if (index >= this.length) {
       this.append(val);
     }
-    let newNode = {
+    const newNode = {
       value: val,
       next: null,
     };
 
-    let leader = this.traversalToIndex(index - 1);
+    const leader = this.traversalToIndex(index - 1);
 
     const holdPointer = leader.next;
+    leader.next = newNode;
     newNode.next = holdPointer;
+    this.length++;
+    return this.printList();
   }
 
   traversalToIndex(index) {
@@ -62,7 +73,6 @@ class LinkedList {
       currentNode = currentNode.next;
       counter++;
     }
-
     return currentNode;
   }
 }
@@ -72,7 +82,10 @@ list.append(10);
 list.append(15);
 list.prepend(1);
 list.prepend(90);
-list.insert(99, 23);
+console.log(list.printList());
+// list.insert(4, 99);
+list.remove(4);
+list.remove(1);
 console.log(list.printList());
 // console.log(list.head);
 // console.log(list.tail);
